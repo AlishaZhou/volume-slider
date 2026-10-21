@@ -1,9 +1,9 @@
 let ADMARK = [];
 let AD = [];
 
-let sliderX = 100;
+let sliderX = 200;
 let sliderY = 200;
-let sliderSize = 300;
+let sliderSize = 500;
 let sliderMax = 100;
 let sliderVal = 0;
 let isDragging = false;
@@ -44,7 +44,7 @@ async function setup() {
 function draw() {
   background(200);
 
-  image(volumnSym, 40, 180, 40, 40);
+  image(volumnSym, 140, 180, 40, 40);
   //draws custom slider
   if (isDragging) {
     let constrainedX = constrain(mouseX, sliderX, sliderX + sliderSize);
