@@ -27,7 +27,7 @@ async function setup() {
   createCanvas(windowWidth, windowHeight);
 
   //generate initial # of adMarkers
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 20; i++) {
     let adMarkerpos = random(0, sliderMax);
     let adMarker = int(adMarkerpos);
     ADMARK.push(
