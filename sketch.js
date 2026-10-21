@@ -17,9 +17,11 @@ let contentFiles = [
   "flower-cat.gif",
   "free-breaking-free.png",
   "f5ef5000641ee61a1866e04430db71fd.gif",
+  "B29006AF-6040-4B33-BD8D-A2FF88692BBA-1.gif",
 ];
 
 let volumeSym;
+let aud;
 
 async function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -35,6 +37,8 @@ async function setup() {
 
   content = await Promise.all(contentFiles.map((file) => loadImage(file)));
   volumnSym = await loadImage('images-removebg-preview.png');
+  aud = await createAudio('audio.mp3');
+  aud.play();
 }
 
 function draw() {
@@ -46,6 +50,7 @@ function draw() {
     let constrainedX = constrain(mouseX, sliderX, sliderX + sliderSize);
     sliderVal = int(map(constrainedX, sliderX, sliderX + sliderSize, 0, sliderMax));
   }
+
   stroke(100);
   strokeWeight(4);
   line(sliderX, sliderY, sliderX + sliderSize, sliderY);
